@@ -42,8 +42,10 @@ $(document).ready(function () {
         }
     });
 
+	var dur = $(window).height();
+
     var sceneGreeting = new ScrollMagic.Scene({
-        duration: 500,
+        duration: dur,
 		triggerHook: "onLeave"
 		
     })
@@ -54,7 +56,7 @@ $(document).ready(function () {
     .addTo(controller);
 
 	var sceneAbout = new ScrollMagic.Scene({
-		duration: 500,
+		duration: dur,
 		triggerElement: "#about-block"
 	})
 	.setPin("#about-msg")
@@ -64,7 +66,7 @@ $(document).ready(function () {
 	.addTo(controller);
 	
 	var sceneskills = new ScrollMagic.Scene({
-		duration: 500,
+		duration: dur,
 		triggerElement: "#skills-block"
 	})
 	.setPin("#skills-msg")
@@ -74,7 +76,7 @@ $(document).ready(function () {
 	.addTo(controller);
 	
 	var sceneProjects = new ScrollMagic.Scene({
-		duration: 500,
+		duration: dur,
 		triggerElement: "#proj-block"
 	})
 	.setPin("#proj-msg")
@@ -85,14 +87,14 @@ $(document).ready(function () {
 	
 	var sceneContact = new ScrollMagic.Scene({
 		triggerElement: "#contact-block",
-		duration: 500
+		duration: dur
 	})
 	.setPin("#contact-msg", {pushFollowers: true})
 	.addTo(controller);
 	
 	var sceneSig = new ScrollMagic.Scene({
 		triggerElement: "#contact-block",
-		duration: 500,
+		duration: 300,
 		offset: 0,
 		tweenChanges: true
 	})
