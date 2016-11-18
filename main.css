@@ -1,0 +1,215 @@
+html {
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #303030;
+    color: white;
+}
+
+h2 {
+	margin-left: 10%;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 150%;
+	font-weight: 300;
+    text-align: left;
+	margin-left: 0;
+	display: inline;
+}
+
+h3.fancy {
+	font-size: 130%;
+}
+
+p {
+	margin: 0;
+    padding: 0;
+	display: inline;
+    font-weight: 300;
+    font-size: 80%;
+}
+
+#top-bar {  
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 0;
+    margin-left: 10px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+#top-bar-spacer {
+    height: 100px;
+    width: 100%;
+}
+
+#name {
+    font-weight: 300;
+    font-size: 300%;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    align-self: flex-end;
+    animation-name: fadeInDown;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+#name:hover {
+    color: lightgrey;
+}
+
+#navigation {
+    padding: 0;
+    margin: 0;
+    font-size: 200%;
+    list-style-type: none;
+    display: inline-block;
+    justify-content: flex-start;
+    margin-right: 50px;
+}
+
+.bar {
+    display: inline; 
+    margin: 5px;
+	position: relative;
+}
+
+#greeting-msg {
+    text-align: left;
+    font-size: 600%;
+    font-style: italic;
+    font-weight: 100;
+	margin-top: 5%;
+	margin-right: 0;
+}
+
+#greeting-block {
+	padding-left: 5%;
+}
+
+.block {
+    padding-left: 6%;
+	padding-right: 15%;	
+}
+
+.msg {
+	margin: 0;
+	margin-left: 10%;
+	font-size: 200%;
+}
+
+.fancy {
+	font-family: 'Oleo Script Swash Caps', cursive; 
+    font-size: 120%;
+}
+
+.boring {
+	font-family: 'Source Code Pro', monospace;
+}
+
+.info {
+	margin-left: 10%;
+    text-align: left;
+    margin-right: 20%;
+}
+
+.info#contact {
+    margin-right: 40%;
+}
+
+path {
+	stroke-linejoin: round;
+	stroke: white;
+	stroke-width: 3px;
+	fill: none;
+}
+
+.background {
+	position: fixed;
+	left: 0;
+	top: 0;	
+	opacity: 0;
+    object-fit: fill;
+}
+
+.background#greeting {
+	width: 100%;
+    height: auto;
+}
+
+.background#about {
+	width: 100%;
+	height: auto;
+}
+
+.background#skills {
+    width: 120%;
+	height: auto;
+    content: url("resources/code.png");
+}
+
+.background#proj {
+    width: 120%;
+	height: auto;
+}
+
+.background#contact {
+    content: url("resources/profile.png");
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color:white;
+    font-size: 80%;
+    font-weight: 300;
+}
+
+a:hover { 
+    color:lightgrey; 
+}
+
+#about-info {
+    margin-right: 20%;
+}
+
+#sig-container {
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 60%;
+    height: 60%;
+    margin-bottom: 10%;
+}
+
+.bar:hover {
+    color: lightgrey;
+}
+
+ul {
+    text-decoration: none;
+    text-decoration-style: none;
+    margin: 0;
+}
+
+li {
+    margin: 10px;
+    font-weight: 300;
+    font-size: 80%;
+}
