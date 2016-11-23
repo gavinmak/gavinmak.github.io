@@ -115,6 +115,10 @@ p {
     font-size: 120%;
 }
 
+.fancy > a {
+    font-size: 120%;
+}
+
 .boring {
 	font-family: 'Source Code Pro', monospace;
 }
@@ -212,4 +216,8 @@ li {
     margin: 10px;
     font-weight: 300;
     font-size: 80%;
+}
+
+.ext-link {
+    text-decoration: underline;
 }

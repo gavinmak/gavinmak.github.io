@@ -208,23 +208,23 @@ $(document).ready(function () {
 	.addTo(controller);
 
 	$("#name").click(function () {
-		$("html").velocity("scroll", { duration: 1500, easing: "swing"});
+		$("html").velocity("scroll", { duration: 700, easing: "swing"});
 	});
 	
 	$(".bar#about-nav").click(function (){
-		$("#about-block").velocity("scroll", { duration: 1500, easing: "swing"});
+		$("#about-block").velocity("scroll", { duration: 700, easing: "swing"});
 	});
 	
 	$(".bar#skills-nav").click(function (){
-		$("#skills-block").velocity("scroll", { duration: 1500, easing: "swing"});
+		$("#skills-block").velocity("scroll", { duration: 700, easing: "swing"});
 	});
 	
 	$(".bar#proj-nav").click(function (){
-		$("#proj-block").velocity("scroll", { duration: 1500, easing: "swing"});
+		$("#proj-block").velocity("scroll", { duration: 700, easing: "swing"});
 	});
 	
 	$(".bar#contact-nav").click(function (){
-		$("#scroll-bottom").velocity("scroll", { duration: 1500, easing: "swing"});
+		$("#scroll-bottom").velocity("scroll", { duration: 700, easing: "swing"});
 	});	
 	
 });
