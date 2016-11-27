@@ -119,7 +119,7 @@ $(document).ready(function () {
 			var skillsChart = new Chart(ctx, {
 				type: "horizontalBar",
 				data: {
-					labels: ["Java", "HTML/CSS", "Python", "Javascript", "C++"],
+					labels: ["Java", "HTML/CSS", "Javascript", "Python", "C++"],
 					datasets: [{
 						data: [5, 5, 4.5, 4, 3.5],
 						backgroundColor: [
