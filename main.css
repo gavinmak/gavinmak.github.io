@@ -129,13 +129,6 @@ p {
     margin-right: 20%;
 }
 
-<<<<<<< HEAD
-=======
-.info#contact {
-    margin-right: 40%;
-}
-
->>>>>>> f7bf5cca1103441e25109d766d010e0481e2fcbb
 path {
 	stroke-linejoin: round;
 	stroke: white;
@@ -148,7 +141,6 @@ path {
 	left: 0;
 	top: 0;	
 	opacity: 0;
-<<<<<<< HEAD
     height: 100%;
     width: 100%;
     background-size: cover;     
@@ -168,37 +160,6 @@ path {
     background: url("resources/android2.jpg");
 }
 
-=======
-    object-fit: fill;
-}
-
-.background#greeting {
-	width: 100%;
-    height: auto;
-}
-
-.background#about {
-	width: 100%;
-	height: auto;
-}
-
-.background#skills {
-    width: 120%;
-	height: auto;
-    content: url("resources/code.png");
-}
-
-.background#proj {
-    width: 120%;
-	height: auto;
-}
-
-.background#contact {
-    content: url("resources/profile.png");
-    width: 100%;
-    height: auto;
-}
->>>>>>> f7bf5cca1103441e25109d766d010e0481e2fcbb
 
 a {
     text-decoration: none;

@@ -9,12 +9,9 @@ $(document).ready(function () {
     $("#contact-nav").css("opacity", 0);
     $("#greeting-msg").css("opacity", 0);
 
-<<<<<<< HEAD
 	$('.background').css("height", $(document).height());
 	$('.background').css("background-size", "cover");
 
-=======
->>>>>>> f7bf5cca1103441e25109d766d010e0481e2fcbb
     $("#name").velocity({opacity: 1}, 1000, "linear");
         setTimeout(function () {
             $("#about-nav").velocity({opacity: 1}, 300, function() {
@@ -124,10 +121,6 @@ $(document).ready(function () {
 				data: {
 					labels: ["Java", "HTML/CSS", "Python", "Javascript", "C++"],
 					datasets: [{
-<<<<<<< HEAD
-=======
-
->>>>>>> f7bf5cca1103441e25109d766d010e0481e2fcbb
 						data: [5, 5, 4.5, 4, 3.5],
 						backgroundColor: [
 						'rgba(255, 255, 255, 0.8)',
@@ -162,11 +155,6 @@ $(document).ready(function () {
 					},
 				}
 			});
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f7bf5cca1103441e25109d766d010e0481e2fcbb
 		}
 	})
 	.addTo(controller);
@@ -246,11 +234,7 @@ window.onbeforeunload = function () {
 }
 
 function randomGreeting(){
-<<<<<<< HEAD
 	//$(".background#greeting").css("background", "resources/sf.jpg");
-=======
-	$(".background#greeting").attr("src", "resources/sf.jpg");
->>>>>>> f7bf5cca1103441e25109d766d010e0481e2fcbb
 	var r = Math.ceil(Math.random() * 8);
 	var s = "";
 	switch (r){
@@ -313,7 +297,6 @@ function updatePhoto() {
 	var h = new Date().getHours();
 	
 	if(h < 5){
-<<<<<<< HEAD
 		$(".background#greeting").css("background", "url(resources/sf_night.jpg)");
 		$(".background#about").css("background", "url(resources/golden_gate_night.jpg)");
 	}
@@ -329,32 +312,4 @@ function updatePhoto() {
 		$(".background#greeting").css("background", "url(resources/sf_night.jpg)");
 		$(".background#about").css("background", "url(resources/golden_gate_night.jpg)");
 	}
-=======
-		$(".background#greeting").attr("src", "resources/sf_night.jpg");
-		$(".background#about").attr("src", "resources/golden_gate_night.jpg");
-	}
-	else if(h < 14){
-		$(".background#greeting").attr("src", "resources/sf_day2.jpg");
-		$(".background#about").attr("src", "resources/golden_gate_day1.jpg");
-	}
-	else if(h < 18){
-		$(".background#greeting").attr("src", "resources/sf_day.jpg");
-		$(".background#about").attr("src", "resources/golden_gate_day2.jpg");
-	}
-	else{
-		$(".background#greeting").attr("src", "resources/sf_night.jpg");
-		$(".background#about").attr("src", "resources/golden_gate_night.jpg");
-	}
-
-	var r = Math.ceil(Math.random() * 2);
-
-	if(r === 1) {
-		$(".background#proj").attr("src", "resources/android1.jpg");
-	}
-
-	else{
-		$(".background#proj").attr("src", "resources/android2.jpg");
-	}
-
->>>>>>> f7bf5cca1103441e25109d766d010e0481e2fcbb
 }
