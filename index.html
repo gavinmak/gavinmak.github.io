@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel="icon" type="image/png" href="resources/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100i,200,300,400|
+		Playfair+Display:700i|Josefin+Sans:100,300|Oleo+Script+Swash+Caps|Source+Code+Pro" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+		<script src="scripts/jquery-3.1.1.min.js"></script>
+		<script src="scripts/velocity.min.js"></script>
+        <script src="scripts/ScrollMagic.min.js"></script>
+		<script src="scripts/jquery.ScrollMagic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script src="scripts/animation.gsap.min.js"></script>
+		<script src="scripts/animation.velocity.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+        <script src="scripts/core.js"></script>
+		<script src="scripts/main.js"></script>
+		
+        <title>Gavin Mak</title>
+    </head>
+    <body>
+		<img class="background" id="greeting">
+		
+		<img class="background" id="about">
+		<img class="background" id="skills">
+		<img class="background" id="proj">
+		<img class="background" id="contact"> 
+        <div id="top-bar">
+            <h1 id="name">Gavin Mak</h1>
+            <div id="navigation">
+                <div id="about-nav" class="bar">About</div>
+                <div id="skills-nav" class="bar">Skills</div>
+                <div id="proj-nav" class="bar">Projects</div>
+                <div id="contact-nav" class="bar">Contact</div>
+            </div>
+        </div>
+		<div id="top-bar-spacer"></div>
+
+        <div id="greeting-block" class="block">
+            <h2 id="greeting-msg"></h2>
+        </div>
+
+        <div id="about-block" class="block">
+            <div id="about-msg" class="msg">
+                <h3>I make </h3><h3 class="fancy">things</h3><h3>.</h3>
+				<div class="info" id="about-info">
+					<p>Based in the Bay Area. I make websites, Android apps,
+						 and Chrome extensions. Studying computer science
+						 and statistics at UC Berkeley. 
+						 Go bears!</p>
+				</div>
+            </div>
+        </div>
+
+        <div id="skills-block" class="block">
+            <div id="skills-msg" class="msg">
+                <h3 class="fancy">Stuff</h3><h3> I'm good at.</h3>
+				<div class="info">
+					<canvas id="skills-chart" width="800" height="400"></canvas>
+				</div>
+            </div>
+        </div>
+
+        <div id="proj-block" class="block">
+            <div id="proj-msg" class="msg">
+                <h3>Some of my recent projects.</h3>
+				<div class="info">
+					<ul>
+						<li><p class="fancy">
+							<a href="https://chrome.google.com/webstore/detail/cursor-spotlight/ojkimlndhapijepkjgdlblbanlenjhgj" class="ext-link">Cursor Spotlight</a>
+							</p>: A Chrome extension
+							 that highlights the cursor's position on the page.
+						</li>
+						<li><p class="fancy" class="ext-link">
+							<a href="https://play.google.com/store/apps/details?id=com.gavinmak.gavinmak.minimalisticflowers" class="ext-link">Minimalistic Flowers</a>
+							</p>: A material design inspired
+						 Android watch face with a floral theme.</li>
+						<li><p class="fancy" class="ext-link">
+							<a href="https://play.google.com/store/apps/details?id=com.caliberdev.ballandcup" class="ext-link">Ball and Cup</a>
+							</p>: A realistic, physics-based 
+							simulation of the ball and cup game. Built with a custom engine.
+						</li>
+						<li><p class="fancy">
+								This website!
+							</p>
+						</li>
+					</ul>
+				</div>
+            </div>
+        </div>
+        
+        <div id="contact-block" class="block">
+            <div id="contact-msg" class="msg">
+                <h3>Like it? Let's chat.</h3>
+				<div class="info" id="contact">
+					<p>Drop me a message </p><a href="mailto:gavinmak98@gmail.com" class="ext-link">here.</a>
+					<p> Or contact me through </p><a href="https://www.linkedin.com/in/gavin-mak-617703126" class="ext-link">LinkedIn.</a><p> Thanks for visiting!</p>
+					<br><br><p>Sincerely,</p>
+					<div id="sig-container">
+						<svg version="1.1" id="signature" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							viewBox="0 0 800 200" style="enable-background:new 0 0 800 200;" xml:space="preserve">
+						<path id="sig-gavin" class="st0" d="M5.571,194.627c16.637-22.259,27.005-49.905,33.35-78.264s8.875-57.623,11.384-86.754
+							c0.622-7.224,1.116-15.091-2.365-21.164c-0.782-1.364-1.95-2.697-3.376-2.636c-1.147,0.049-2.099,0.989-2.914,1.914
+							C29.97,20.977,25.781,40.826,25.955,59.634c0.164,17.681,5.149,37.744,21.605,42.889c6.665,2.084,13.753,0.987,20.039-2.291
+							c12.886-6.719,20.799-20.545,26.509-34.816c6.163-15.403,9.721-35.094,0.208-48.084c4.66,43.239,9.231,87.913-1.472,129.727
+							c-4.154,16.23-12.677,33.673-27.246,36.648c-10.142,2.071-20.22-3.639-28.785-10.181c-9.807-7.49-19.179-16.85-23.278-29.549
+							c-0.361-1.118-0.511-2.343-0.299-3.509c1.002-5.513,8.251-4.233,12.971-2.343c18.54,7.423,39.001,0.767,57.274-7.475
+							c20.261-9.139,39.846-20.236,58.475-33.133c-15.016,17.791-27.894,42.349-21.984,66.125c14.152-10.352,22.861-29.724,21.982-48.897
+							c-1.417,20.54,0.496,43.587,13.756,57.55c1.273,1.34,2.749,2.628,4.474,2.78c1.981,0.174,3.803-1.185,5.336-2.629
+							c8.287-7.809,13.049-19.524,15.883-31.362c4.172-17.425,4.696-35.974,1.518-53.67c-3.649,22.042-1.881,45.221,5.05,66.209
+							c1.077,3.262,2.404,6.685,6.66,6.933c2.448,0.142,4.841-0.88,6.777-2.598c5.5-4.88,8.373-12.403,10.581-19.844
+							c4.845-16.322,7.268-33.58,7.133-50.815c11.115,4.966,24.29,3.428,34.296-4.006c-5.275,21.437-10.606,43.561-7.675,65.697
+							c0.37,2.797,1.311,5.497,2.967,7.601c3.918,4.978,8.377,3.129,11.951,0.639c22.598-15.743,23.558-54.03,42.406-75.261
+							c11.11,15.243,12.503,36.572,13.399,56.382l24.84-54.841c2.778,17.749,6.1,35.386,9.958,52.869
+							c2.032,9.207,4.947,19.437,12.407,23.622c5.256,2.948,11.545,2.06,17.143,0.099c12.652-4.431,23.834-14.134,30.967-26.87"/>
+						<path id="sig-mak" class="st0" d="M419.236,55.763l39.659-42.01c14.168-11.971,24.232,3.967,26.695,17.553c2.4,13.242,1.733,26.933,0.408,40.362
+							c-3.278,33.203-10.496,65.742-17.694,98.165c11.373-46.887,28.942-91.897,51.988-133.102c1.905-3.406,4.694-6.006,7.822-7.989
+							c2.683-1.701,7.63-7.471,11.598,0.691c7.286,41.241-3.972,83.039-15.096,122.985c11.595-33.581,25.032-66.368,40.213-98.118
+							c5.029-10.518,12.346-22.349,23.023-22.067c4.722,17.423-0.289,36.012-4.154,53.695c-4.605,21.067-7.591,42.574-8.912,64.209
+							c-0.217,3.56-0.294,7.606,6.519,8.287c25.396-13.316,38.362-43.401,47.49-72.392c-17.08,30.013-32.54,63.769-29.196,99.414
+							c2.584,6.112,6.474,4.392,9.227,2.176c8.062-6.489,12.127-17.432,15.049-28.037c5.922-21.498,8.756-44.052,8.361-66.539
+							c-4.055,20.94-2.647,43.162,4.006,63.257c3.055,9.227,9.639,19.754,19.72,13.801c11.255-8.388,15.569-23.384,18.441-37.699
+							c6.345-31.623,8.065-64.203,7.907-96.609c1.123,49.03-0.203,98.131-3.972,146.996c-0.812-14.583-0.503-29.244,0.923-43.769
+							c2.534-25.819,10.592-54.12,31.238-66.095c5.982,4.989,8.538,13.854,8.336,22.186c-0.201,8.333-2.761,16.341-5.291,24.184
+							c-5.025,15.577-11.975,33.227-26.292,37.55c14.134,13.308,33.06,20.081,51.49,18.429s36.145-11.712,48.195-27.368"/>
+						<path id="sig-dot" class="st0" d="M264.43,59.136c-0.791-1.28,0.045-3.385,1.409-3.548"/>
+						</svg>
+            		</div>
+					<div id="scroll-bottom"></div>
+				</div>
+			</div>
+        </div>
+    </body>
+</html>
