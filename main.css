@@ -77,8 +77,25 @@ p {
 
 }
 
+.contact {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  padding-top: 12px;
+  width: 100%;
+}
+
+.contact-link {
+  margin: 6px;
+  padding: 6px;
+}
+
 img {
   margin-bottom: 12px;
+}
+
+svg {
+  stroke: white;
 }
 
 #profile {
