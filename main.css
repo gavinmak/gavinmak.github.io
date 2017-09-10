@@ -1,0 +1,98 @@
+body {
+
+}
+
+h2 {
+  font-family: 'Muli', sans-serif;
+}
+
+.card > h2 {
+    color: #212121;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+}
+
+.container-fluid {
+  max-width: 50%;
+}
+
+
+@media (max-width: 991px) {
+
+  .container-fluid {
+    max-width: 90%;
+  }
+}
+
+.gradient {
+  background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+  margin-bottom: 12px;
+}
+
+.col {
+  margin: 12px;
+  padding: 12px;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  color: #757575;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card::after {
+  content: "";
+  border-radius: 8px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.bio {
+  color: white;
+
+}
+
+img {
+  margin-bottom: 12px;
+}
+
+#profile {
+  max-width: 200px;
+}
+
+.small {
+  max-width: 100px;
+}
+
+.work {
+
+}
+
+.project {
+
+}

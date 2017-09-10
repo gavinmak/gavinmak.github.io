@@ -1,15 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Gavin Mak</title>
-		<link rel="icon" type="image/png" href="res/favicon.png">
-        <link href="main.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        Under maintenance. Coming back 9/8/17.
-    </body>
+  <head>
+    <title>Gavin Mak</title>
+	<link rel="icon" type="image/png" href="res/favicon.png">
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ovo|Muli" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="gradient">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col bio">
+            <div class="text-center">
+              <img src="res/profile.jpg" class="rounded-circle" alt="" id="profile">
+            </div>
+            <h2 class="text-center">
+              Hello, I'm Gavin.
+            </h2>
+            <p style="margin: 0;">
+              I'm a second-year student studying computer science
+              and statistics at UC Berkeley. Feel free to look at some of the
+              activites I've been working on and some not-so-recent
+              projects!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col card work">
+          <div class="text-center">
+            <img src="res/berkeley.png" class="rounded-circle small" alt="">
+          </div>
+          <h2 class="text-center">
+            CS61A
+          </h2>
+          <p>
+            This fall semester, I'm on the course staff teaching the
+            introductory programming class: <a href="https://cs61a.org/">Structure and Interpretation of
+            Computer Programs</a>. It's one of my favorite courses at UC Berkeley
+            because we cover a wide range of computer science topics while maintaining
+            accessibility to those who haven't coded before. If you're
+            a student wondering whether or not to take the class, go for it!
+          </p>
+        </div>
+        <div class="col card work">
+          <div class="text-center">
+            <img src="res/bridge.jpg" class="rounded-circle small" alt="">
+          </div>
+          <h2 class="text-center">
+            BridgeUSA
+          </h2>
+          <p>
+            I help run BridgeUSA at Berkeley. It's an organization that seeks to
+            span the political divide on campus through civil discourse and
+            debate. So far, we've been able to spark healthy discussions through
+            holing open forums and inviting public figures from all sides of the
+            political specturum onto campus. As CTO, I created and maintain the
+            organization's <a href="http://www.bridgeatberkeley.com">website</a>.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col card project">
+          <h2 class="text-center">
+            Cut It Out
+          </h2>
+          <p>
+            A utility that uses Google Cloud Platform’s machine learning and
+            natural language processing API to summarize text including articles
+            and essays. Analyzes paragraphs to find relevance to the main
+            message and includes phrases most pertinent to the body of the text.
+          </p>
+        </div>
+        <div class="col card project">
+          <h2 class="text-center">
+            Thought Bot
+          </h2>
+          <p>
+            A Twitter bot that uses a recurrent neural network to generate
+            phrases based on Reddit’s ShowerThoughts. Key expressions are
+            automatically selected and tweeted several times a day.
+          </p>
+        </div>
+        <div class="col card project">
+          <h2 class="text-center">
+            Ball and Cup
+          </h2>
+          <p>
+            A realistic simulation of the ball and cup game on Android. Created
+            using a custom-built game engine which implements string tension,
+            collision detection, parabolic rope physics, and air friction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
