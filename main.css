@@ -63,12 +63,23 @@ p {
 }
 
 .card:hover {
-  -webkit-transform: scale(1.03, 1.03);
-  transform: scale(1.03, 1.03);
+  -webkit-transform: scale(1.025, 1.025);
+  transform: scale(1.025, 1.025);
 }
 
 .card:hover::after {
     opacity: 1;
+}
+
+.link-to-blue {
+  -webkit-transform: stroke .6s ease;
+  transition: stroke .6s ease;
+  stroke: #fff3e0;
+
+}
+
+.link-to-blue:hover {
+  stroke: #40c4ff;
 }
 
 .bio {
@@ -77,6 +88,7 @@ p {
 
 .bio > p {
   margin: 0;
+  color: #fff3e0;
 }
 
 .contact {
