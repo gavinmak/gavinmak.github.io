@@ -1,12 +1,17 @@
 html {
   font-family: 'Courier Prime', monospace;
   line-height: 1.5;
+  height: -webkit-fill-available;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0;
