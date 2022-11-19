@@ -1,6 +1,7 @@
 html {
   line-height: 1.5;
-  letter-spacing: 0.02rem;
+  font-family: 'Courier New', monospace;
+  font-weight: 400;
   height: -webkit-fill-available;
 }
 
@@ -14,125 +15,142 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+header {
+  font-family: 'Futura PT', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 3rem;
+}
+
+body, h1, h2 {
   padding: 0;
   margin: 0;
 }
 
 h1 {
-  padding: 0;
-  margin: 0;
-  font-size: 2.2rem;
-  letter-spacing: 0.1rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 0.9rem;
+  text-align: right;
 }
 
 p {
+  font-size: 1rem;
   margin-top: 1.5rem;
 }
+
+h2, h2 > strong, p > strong {
+  font-weight: 600;
+}
+
+/*
+a {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: from-font;
+}
+*/
 
 a, a:focus {
   text-decoration: none;
   outline: none;
 }
 
-a:active {
-  text-decoration: underline;
-}
-
 /* Dark/light mode based on device settings. */
 @media (prefers-color-scheme: light) {
-  /* Black text on white background is thicker. */
-  html {
-    font-family: 'Courier Prime', monospace;
-    font-weight: 400;
-  }
-
-  strong {
-    font-family: 'Courier Prime', monospace;
-    font-weight: 700;
-  }
-
   body {
-    color: #202124;
-    background-color: #fafafa;
+    color: var(--light-primary);
+    background-color: var(--light-secondary);
+  }
+
+  ::selection {
+    color: var(--light-secondary);
+    background-color: var(--light-primary);
   }
 
   a, a:visited {
-    color: #1a73e8;
+    color: var(--light-primary);
   }
 
-  a:active {
-    color: #104fa2;
+  a:active, a:hover {
+    color: #000;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    font-family: 'Courier New', monospace;
-    font-weight: 400;
-  }
-
-  strong {
-    font-family: 'Courier Prime', monospace;
-    font-weight: 700;
-  }
-
   body {
-    color: #e8eaed;
-    background-color: #121212;
+    color: var(--dark-primary);
+    background-color: var(--dark-secondary);
+  }
+
+  ::selection {
+    color: var(--dark-secondary);
+    background-color: var(--dark-primary);
   }
 
   a, a:visited {
-    color: #8ab4f8;
+    color: var(--dark-primary);
   }
 
-  a:active {
-    color: #b7d1fb;
-  }
-
-  /* Because we use different fonts to counteract black/white text sizing, hack strikethrough to look better. */
-  del {
-    text-decoration: none;
-    position: relative;
-  }
-
-  del::before{
-    content: '';
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: calc(50% + 1px);
-    border-bottom: 2px solid;
+  a:active, a:hover {
+    color: #fff;
   }
 }
 
-/* Fonts. */
-@font-face {
-  font-family: 'Courier New';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url('fonts/Courier-New.woff2') format('woff2');
-  unicode-range: U+0025-00FF;
+:root {
+  --light-primary: #353535;
+  --light-primary-rgb: 53, 53, 53;
+  --light-secondary: #f9f9f9;
+
+  --dark-primary: #e8eaed;
+  --dark-primary-rgb: 232, 234, 237;
+  --dark-secondary: #121212;
 }
 
-/* courier-prime-regular - latin */
+/* futura-pt-demimobl - latin */
 @font-face {
-  font-family: 'Courier Prime';
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Futura PT';
+  font-style: oblique;
+  font-weight: 600;
   src: local(''),
-       url('fonts/courier-prime-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/courier-prime-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/futura-pt-demiobl.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/futura-pt-demiobl.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* courier-prime-700 - latin */
+/* futura-pt-boldobl - latin */
 @font-face {
-  font-family: 'Courier Prime';
-  font-style: normal;
+  font-family: 'Futura PT';
+  font-style: oblique;
   font-weight: 700;
   src: local(''),
-       url('fonts/courier-prime-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/courier-prime-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/futura-pt-boldobl.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/futura-pt-boldobl.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* courier-new-regular - latin */
+@font-face {
+  font-family: 'Courier New';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/courier-new-07-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/courier-new-07-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* courier-new-bold - latin */
+@font-face {
+  font-family: 'Courier New';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('fonts/courier-new-07-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/courier-new-07-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* Responsive font sizing. */
