@@ -1,5 +1,5 @@
 html {
-  font-family: 'Courier Prime', monospace;
+  font-family: 'Courier New', monospace;
   line-height: 1.5;
   height: -webkit-fill-available;
 }
@@ -19,19 +19,17 @@ body {
 }
 
 h1 {
-  font-weight: 700;
   padding: 0;
   margin: 0;
-  text-align: center;
-  font-style: italic;
+  font-size: 2.2rem;
 }
 
-h1 > span {
-  font-weight: 400;
+p {
+  margin-top: 1.5rem;
 }
 
-p > span {
-  font-weight: 700;
+p > strong {
+  font-family: 'Courier Prime Bold', monospace;
 }
 
 a, a:focus {
@@ -62,7 +60,7 @@ a:active {
 @media (prefers-color-scheme: dark) {
   body {
     color: #e8eaed;
-    background-color: #202124;
+    background-color: #121212;
   }
 
   a, a:visited {
@@ -72,6 +70,23 @@ a:active {
   a:active {
     color: #b7d1fb;
   }
+}
+
+/* Fonts. */
+@font-face {
+  font-family: 'Courier New';
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/Courier-New.woff2') format('woff2');
+  unicode-range: U+0025-00FF;
+}
+
+@font-face {
+  font-family: 'Courier Prime Bold';
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/Courier-Prime-Bold.woff2') format('woff2');
+  unicode-range: U+0025-00FF;
 }
 
 /* Responsive font sizing. */
