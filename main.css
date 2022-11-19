@@ -17,6 +17,10 @@ body {
   justify-content: center;
 }
 
+.wrapper {
+  margin: 2rem;
+}
+
 header {
   font-family: 'Futura PT', sans-serif;
   font-size: 1rem;
@@ -35,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: right;
 }
 
