@@ -1,6 +1,6 @@
 html {
-  font-family: 'Courier New', monospace;
   line-height: 1.5;
+  letter-spacing: 0.02rem;
   height: -webkit-fill-available;
 }
 
@@ -22,14 +22,11 @@ h1 {
   padding: 0;
   margin: 0;
   font-size: 2.2rem;
+  letter-spacing: 0.1rem;
 }
 
 p {
   margin-top: 1.5rem;
-}
-
-p > strong {
-  font-family: 'Courier Prime Bold', monospace;
 }
 
 a, a:focus {
@@ -43,9 +40,20 @@ a:active {
 
 /* Dark/light mode based on device settings. */
 @media (prefers-color-scheme: light) {
+  /* Black text on white background is thicker. */
+  html {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 400;
+  }
+
+  strong {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+  }
+
   body {
     color: #202124;
-    background-color: #fff;
+    background-color: #fafafa;
   }
 
   a, a:visited {
@@ -58,6 +66,16 @@ a:active {
 }
 
 @media (prefers-color-scheme: dark) {
+  html {
+    font-family: 'Courier New', monospace;
+    font-weight: 400;
+  }
+
+  strong {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+  }
+
   body {
     color: #e8eaed;
     background-color: #121212;
@@ -70,23 +88,51 @@ a:active {
   a:active {
     color: #b7d1fb;
   }
+
+  /* Because we use different fonts to counteract black/white text sizing, hack strikethrough to look better. */
+  del {
+    text-decoration: none;
+    position: relative;
+  }
+
+  del::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: calc(50% + 1px);
+    border-bottom: 2px solid;
+  }
 }
 
 /* Fonts. */
 @font-face {
   font-family: 'Courier New';
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
   src: url('fonts/Courier-New.woff2') format('woff2');
   unicode-range: U+0025-00FF;
 }
 
+/* courier-prime-regular - latin */
 @font-face {
-  font-family: 'Courier Prime Bold';
+  font-family: 'Courier Prime';
   font-style: normal;
-  font-display: swap;
-  src: url('fonts/Courier-Prime-Bold.woff2') format('woff2');
-  unicode-range: U+0025-00FF;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/courier-prime-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/courier-prime-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* courier-prime-700 - latin */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('fonts/courier-prime-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/courier-prime-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* Responsive font sizing. */
