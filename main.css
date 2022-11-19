@@ -1,5 +1,5 @@
 html {
-  line-height: 1.5;
+  line-height: var(--vertical-scale);
   font-family: 'Courier New', monospace;
   font-weight: 400;
   height: -webkit-fill-available;
@@ -25,7 +25,7 @@ header {
   font-family: 'Futura PT', sans-serif;
   font-size: 1rem;
   letter-spacing: 0.05rem;
-  margin-bottom: 3rem;
+  margin-bottom: calc(var(--vertical-scale) * 2rem);
 }
 
 body, h1, h2 {
@@ -45,24 +45,38 @@ h2 {
 
 p {
   font-size: 1rem;
-  margin-top: 1.5rem;
+  margin-top: calc(var(--vertical-scale) * 1rem);
 }
 
 h2, h2 > strong, p > strong {
   font-weight: 600;
 }
 
-/*
 a {
-  text-decoration: underline;
-  text-underline-position: under;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
   text-decoration-thickness: from-font;
+  text-underline-position: from-font;
 }
-*/
 
-a, a:focus {
-  text-decoration: none;
-  outline: none;
+i {
+  font-style: normal;
+}
+
+.blue {
+  color: #4285f4;
+}
+
+.red {
+  color: #db4437;
+}
+
+.yellow {
+  color: #f4b400;
+}
+
+.green {
+  color: #0f9d58;
 }
 
 /* Dark/light mode based on device settings. */
@@ -84,6 +98,10 @@ a, a:focus {
   a:active, a:hover {
     color: #000;
   }
+
+  .berkeley {
+    color: #c4820e;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,12 +122,22 @@ a, a:focus {
   a:active, a:hover {
     color: #fff;
   }
+
+  .google {
+    mix-blend-mode: screen;
+  }
+
+  .berkeley {
+    color: #fdb515;
+  }
 }
 
 :root {
+  --vertical-scale: 1.5;
+
   --light-primary: #353535;
   --light-primary-rgb: 53, 53, 53;
-  --light-secondary: #f9f9f9;
+  --light-secondary: #f9f9f9; 
 
   --dark-primary: #e8eaed;
   --dark-primary-rgb: 232, 234, 237;
@@ -137,7 +165,6 @@ a, a:focus {
        url('fonts/futura-pt-boldobl.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   font-display: swap;
 }
-
 
 /* courier-new-regular - latin */
 @font-face {
