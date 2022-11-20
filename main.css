@@ -28,19 +28,26 @@ header {
   margin-bottom: calc(var(--vertical-scale) * 2rem);
 }
 
-body, h1, h2 {
+body, h1, h2, header > p {
   padding: 0;
   margin: 0;
 }
 
 h1 {
-  font-size: 3.75rem;
+  font-size: 4rem;
   font-weight: 700;
+  letter-spacing: 0.14rem;
 }
 
 h2 {
   font-size: 1rem;
   text-align: right;
+}
+
+header > p {
+  font-size: 1rem;
+  text-decoration-line: none;
+  outline: none;
 }
 
 p {
