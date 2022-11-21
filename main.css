@@ -1,6 +1,6 @@
 html {
   line-height: var(--vertical-scale);
-  font-family: 'Courier New', monospace;
+  font-family: 'Courier Prime', monospace;
   font-weight: 400;
   height: -webkit-fill-available;
 }
@@ -74,22 +74,6 @@ i {
   font-style: normal;
 }
 
-.blue {
-  color: #4285f4;
-}
-
-.red {
-  color: #db4437;
-}
-
-.yellow {
-  color: #f4b400;
-}
-
-.green {
-  color: #0f9d58;
-}
-
 /* Dark/light mode based on device settings. */
 @media (prefers-color-scheme: light) {
   body {
@@ -110,8 +94,20 @@ i {
     color: #000;
   }
 
-  .berkeley {
-    color: #c4820e;
+  .blue {
+    color: #4285f4;
+  }
+
+  .red {
+    color: #db4437;
+  }
+
+  .yellow {
+    color: #f4b400;
+  }
+
+  .green {
+    color: #0f9d58;
   }
 }
 
@@ -134,12 +130,20 @@ i {
     color: #fff;
   }
 
-  .google {
-    mix-blend-mode: screen;
+  .blue {
+    color: #4286f3;
   }
 
-  .berkeley {
-    color: #fdb515;
+  .red {
+    color: #eb4235;
+  }
+
+  .yellow {
+    color: #fbbc06;
+  }
+
+  .green {
+    color: #34a953;
   }
 }
 
@@ -196,6 +200,27 @@ i {
   src: local(''),
        url('fonts/courier-new-07-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('fonts/courier-new-07-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+}
+
+/* courier-prime-regular - latin */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/courier-prime-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/courier-prime-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+}
+/* courier-prime-700 - latin */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('fonts/courier-prime-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/courier-prime-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   font-display: swap;
 }
 
