@@ -12,6 +12,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href="https://gavinmak.com/">
+    <script>
+      const init = () => {
+        const local = "gavinmak98";
+        const domain = "gmail.com";
+        const el = document.getElementById("mlink");
+        el.href = `mailto:${local}@${domain}`;
+      }
+      window.onload = init;
+    </script>
   </head>
 
   <body>
@@ -19,7 +28,6 @@
       <header>
         <p>hi,</p>
         <h1>i’m <strong>Gavin</strong></h1>
-        <h2><strong>(gavin mak)</strong></h2>
       </header>
       <p>
         software engineer at <strong class="google"><i class="blue">g</i><i class="red">o</i><i class="yellow">o</i><i class="blue">g</i><i class="green">l</i><i class="red">e</i></strong><br>
@@ -34,7 +42,7 @@
         <a href="GavinMakResume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
         and
         <a href="https://www.linkedin.com/in/gavin-mak-617703126/" target="_blank" rel="noopener noreferrer">linkedin</a><br>
-        email me at <a href="mailto:gavinmak98@gmail.com">gavinmak98@gmail.com</a>
+        or send me an <a id="mlink" href="#">email</a>
       </p>
     </div>
   </body>
