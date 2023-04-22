@@ -1,0 +1,162 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-2pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-2pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%==== Profile ====%
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+	\textbf{{\LARGE Gavin Mak}} & gavinmak98@gmail.com\\
+	Software Engineer & gavinmak.com\\
+	& (781) 389-2000\\
+\end{tabular*}
+\vspace{4mm}
+
+
+%==== Experience ====%
+\header{{\large Experience}}
+\vspace{2mm}
+
+\textbf{Google} \hfill San Francisco, CA\\
+\vspace{1mm}
+\textit{Software Engineer} \hfill \textit{Aug 2020 - Present}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Led a multi-quarter initiative to integrate a modernized UX for continuous integration testing, improving developer workflow and efficiency.
+	\item Maintained open-source developer tools for Chrome development and contributed to the strategic planning for their ongoing development.
+	\item Joined two on-call rotations overseeing Chrome’s infrastructure and repositories. Responsible for build monitoring, issue triaging, and managing escalations.
+\end{itemize}
+
+\textbf{Google} \hfill Bellevue, WA\\
+\vspace{1mm}
+\textit{Software Engineer Intern} \hfill \textit{Aug 2019 - Nov 2019}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Spearheaded an experiment to integrate open-source Chrome tests into Google\textquotesingle{}s internal infrastructure, enhancing test coverage and accelerating bug detection.
+\end{itemize}
+
+\textbf{Wayfair} \hfill Boston, MA\\
+\vspace{1mm}
+\textit{Software Engineer Intern} \hfill \textit{June 2019 - Aug 2019}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Built a comprehensive tool to streamline Apache Kafka topic management using React, Java Spring, and MariaDB, superseding the former CLI.
+	\item Achieved a 97\% reduction in topic creation time, saving over 8 hours on average.
+\end{itemize}
+
+\textbf{SAP} \hfill San Ramon, CA\\
+\vspace{1mm}
+\textit{Software Developer Intern} \hfill \textit{June 2018 - Aug 2018}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Enabled connections between SAP HANA and PostgreSQL databases, facilitating real-time data transfer, and benefiting clients such as Coca Cola, Decathlon, and Miele.
+	\item Ensured seamless integration by creating custom query translations and data type mappings to bridge functionality gaps.
+\end{itemize}
+\vspace{4mm}
+
+
+%==== Education ====%
+\header{{\large Education}}
+\vspace{2mm}
+\textbf{University of California, Berkeley}\hfill Berkeley, CA\\
+\vspace{1mm}
+\textit{Bachelor of Arts, Computer Science} | \textit{GPA: 3.8} \hfill \textit{May 2020}\\
+\vspace{2mm}
+\textbf{Honors}: Upsilon Pi Epsilon Honor Society (Top 1/3 of CS majors)\\
+\vspace{6mm}
+
+
+%==== Projects ====%
+\header{{\large Projects}}
+\vspace{2mm}
+
+{\textbf{Poster}} \hfill {\sl Flutter, MongoDB, Firebase Auth} \\
+\vspace{1mm}
+Built a social media app for medium to long format text posts on iOS and Android. Designed a content recommendation algorithm based on user preferences. \\
+\vspace*{2mm}
+
+{\textbf{gavinmak.com}} \hfill {\sl HTML5, CSS, JavaScript} \\
+\vspace{1mm}
+Created a personal website with responsive web design in mind. Automatically uses dark mode based on browser settings.\\
+\vspace*{2mm}
+
+{\textbf{Curreta}} \hfill {\sl Django, React Native} \\
+\vspace{1mm}
+Developed a web and mobile app for a crowdsourced, real-time public transit tracker. Used the GeoDjango API along with BART and AC Transit schedules to provide live locations for the Bay Area.\\
+\vspace*{2mm}
+
+\vspace*{4mm}
+
+
+%==== Skills ====%
+\header{{\large Skills}}
+\vspace{2mm}
+
+\begin{tabular}{@{}lll@{}}
+	{\textbf{Languages}}:  Python, JavaScript, Go, Java, Dart, SQL & {\textbf{Tools}}: Git, Flutter, React, MongoDB, Figma \\
+\end{tabular}
+
+\end{document}
