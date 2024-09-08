@@ -8,22 +8,15 @@
     \textheight=10in
     \pagestyle{empty}
     \raggedright
-    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+    \usepackage[letterpaper,left=1in,right=1in,bottom=1in,top=1in]{geometry}
+
+
 
     %\renewcommand{\encodingdefault}{cg}
 %\renewcommand{\rmdefault}{lgrcmr}
 
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\area} [2] {
-    \vspace*{-9pt}
-    \begin{verse}
-        \textbf{#1}   #2
-    \end{verse}
-}
-
 \newcommand{\lineunder} {
     \vspace*{-8pt} \\
     \hspace*{-2pt} \hrulefill \\
@@ -31,49 +24,20 @@
 
 \newcommand{\header} [1] {
     {\hspace*{-2pt}\vspace*{6pt} \textsc{#1}}
-    \vspace*{-6pt} \lineunder
-}
-
-\newcommand{\employer} [3] {
-    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
-}
-
-\newcommand{\contact} [3] {
-    \vspace*{-10pt}
-    \begin{center}
-        {\Huge \scshape {#1}}\\
-        #2 \\ #3
-    \end{center}
-    \vspace*{-8pt}
-}
-
-\newenvironment{achievements}{
-    \begin{list}
-        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
-    \end{list}
-}
-
-\newcommand{\schoolwithcourses} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-    \vspace*{5pt}
-}
-
-\newcommand{\school} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
+    \vspace*{-4pt} \lineunder
 }
 % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 %==== Profile ====%
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
 	\textbf{{\LARGE Gavin Mak}} & gavinmak98@gmail.com\\
 	Software Engineer & gavinmak.com\\
-	& (781) 389-2000\\
+	& (781) 389 - 2000\\
 \end{tabular*}
-\vspace{4mm}
+\vspace{6mm}
 
 
 %==== Experience ====%
@@ -81,82 +45,48 @@
 \vspace{2mm}
 
 \textbf{Google} \hfill San Francisco, CA\\
-\vspace{1mm}
+\vspace{2mm}
 \textit{Software Engineer} \hfill \textit{Aug 2020 - Present}\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-	\item Led a multi-quarter initiative to integrate a modernized UX for continuous integration testing, improving developer workflow and efficiency.
-	\item Maintained open-source developer tools for Chrome development and contributed to the strategic planning for their ongoing development.
-	\item Joined two on-call rotations overseeing Chrome’s infrastructure and repositories. Responsible for build monitoring, issue triaging, and managing escalations.
-\end{itemize}
 
-\textbf{Google} \hfill Bellevue, WA\\
-\vspace{1mm}
-\textit{Software Engineer Intern} \hfill \textit{Aug 2019 - Nov 2019}\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-	\item Spearheaded an experiment to integrate open-source Chrome tests into Google\textquotesingle{}s internal infrastructure, enhancing test coverage and accelerating bug detection.
+\begin{itemize} \itemsep 0pt
+    \item \textbf{Continuous Integration UX Modernization (2021 - 2022):}
+        \begin{itemize} \itemsep 2pt
+            \item Led the migration to a new UX for visualizing CI results for thousands of developers across Chromium, replacing the legacy UI with a modern and feature-rich experience.
+            \item Successfully addressed performance challenges by implementing efficient caching mechanisms using IndexedDB and lazy-loading strategies, ensuring responsiveness despite the increased volume of data displayed.
+            \item Designed and implemented a secure markdown-to-HTML converter and HTML sanitizer to safely render CI results, mitigating potential security risks associated with displaying arbitrary HTML content.
+        \end{itemize}
+    \item \textbf{Core Developer Tools for Android and Chrome (2020 - Present):}
+        \begin{itemize} \itemsep 2pt
+            \item Served as a primary maintainer of \texttt{depot\_tools} and \texttt{repo}, essential open-source tools used by thousands of Android, Chrome, and ChromeOS developers.
+            \item Contributed to the migration of Chromium's dependency management to Git submodules, collaborating with multiple teams and ensuring a smooth transition.
+            \item Improved the reliability and observability of these tools through contributions to monitoring, reporting, and ensuring adherence to internal SLOs.
+        \end{itemize}
+    \item \textbf{Large-Scale Git Repository Administration (2020 - Present):}
+        \begin{itemize} \itemsep 2pt
+            \item Administered thousands of Git repositories hosted on Gerrit and Git-on-Borg, supporting development efforts across Chrome and ChromeOS.
+            \item Led a critical project to migrate all repository access control lists (ACLs) to a new, version-controlled system, significantly improving security, auditability, and ease of management.
+        \end{itemize}
 \end{itemize}
-
-\textbf{Wayfair} \hfill Boston, MA\\
-\vspace{1mm}
-\textit{Software Engineer Intern} \hfill \textit{June 2019 - Aug 2019}\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-	\item Built a comprehensive tool to streamline Apache Kafka topic management using React, Java Spring, and MariaDB, superseding the former CLI.
-	\item Achieved a 97\% reduction in topic creation time, saving over 8 hours on average.
-\end{itemize}
-
-\textbf{SAP} \hfill San Ramon, CA\\
-\vspace{1mm}
-\textit{Software Developer Intern} \hfill \textit{June 2018 - Aug 2018}\\
-\vspace{-1mm}
-\begin{itemize} \itemsep 1pt
-	\item Enabled connections between SAP HANA and PostgreSQL databases, facilitating real-time data transfer, and benefiting clients such as Coca Cola, Decathlon, and Miele.
-	\item Ensured seamless integration by creating custom query translations and data type mappings to bridge functionality gaps.
-\end{itemize}
-\vspace{4mm}
+\vspace{6mm}
 
 
 %==== Education ====%
 \header{{\large Education}}
 \vspace{2mm}
 \textbf{University of California, Berkeley}\hfill Berkeley, CA\\
-\vspace{1mm}
+\vspace{2mm}
 \textit{Bachelor of Arts, Computer Science} | \textit{GPA: 3.8} \hfill \textit{May 2020}\\
+\vspace{4mm}
+\textbf{Relevant Coursework:} Operating Systems, Data Structures and Algorithms, Computer Security, Networks and Internet Architecture, Machine Learning\\
 \vspace{2mm}
 \textbf{Honors}: Upsilon Pi Epsilon Honor Society (Top 1/3 of CS majors)\\
 \vspace{6mm}
 
 
-%==== Projects ====%
-\header{{\large Projects}}
-\vspace{2mm}
-
-{\textbf{Poster}} \hfill {\sl Flutter, MongoDB, Firebase Auth} \\
-\vspace{1mm}
-Built a social media app for medium to long format text posts on iOS and Android. Designed a content recommendation algorithm based on user preferences. \\
-\vspace*{2mm}
-
-{\textbf{gavinmak.com}} \hfill {\sl HTML5, CSS, JavaScript} \\
-\vspace{1mm}
-Created a personal website with responsive web design in mind. Automatically uses dark mode based on browser settings.\\
-\vspace*{2mm}
-
-{\textbf{Curreta}} \hfill {\sl Django, React Native} \\
-\vspace{1mm}
-Developed a web and mobile app for a crowdsourced, real-time public transit tracker. Used the GeoDjango API along with BART and AC Transit schedules to provide live locations for the Bay Area.\\
-\vspace*{2mm}
-
-\vspace*{4mm}
-
-
 %==== Skills ====%
 \header{{\large Skills}}
 \vspace{2mm}
-
-\begin{tabular}{@{}lll@{}}
-	{\textbf{Languages}}:  Python, JavaScript, Go, Java, Dart, SQL & {\textbf{Tools}}: Git, Flutter, React, MongoDB, Figma \\
-\end{tabular}
-
+\textbf{Languages}:  Python, JavaScript, TypeScript, Go, Java, Dart, SQL\\
+\vspace{2mm}
+\textbf{Tools}: Git, Gerrit, Flutter, React, Figma \\
 \end{document}
