@@ -140,6 +140,34 @@ nav a:hover {
     right: 20px;
 }
 
+.copyright {
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    color: #666;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+/* Disable selection on images */
+.thumbnail-container img,
+#fullscreen-image {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Watermark on fullscreen images */
+.fullscreen-viewer::after {
+    content: '© Gavin Mak';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
 /* Loading Spinner */
 .loading-spinner {
     position: absolute;

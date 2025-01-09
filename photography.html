@@ -24,12 +24,11 @@
         </header>
         
         <div class="gallery-container">
-            
             <section class="gallery-section">
                 <h2>tokyo — oct 2024</h2>
                 <div class="gallery">
                     <div class="thumbnail-container">
-                        <img src="images/hallway.jpg" loading="lazy">
+                        <img src="images/hallway.jpg" loading="lazy" draggable="false">
                     </div>
                 </div>
             </section>
@@ -38,7 +37,7 @@
                 <h2>alaska — mar 2024</h2>
                 <div class="gallery">
                     <div class="thumbnail-container">
-                        <img src="images/aurora.jpg" loading="lazy">
+                        <img src="images/aurora.jpg" loading="lazy" draggable="false">
                     </div>
                 </div>
             </section>
@@ -47,17 +46,21 @@
                 <h2>beijing, hong kong, seoul — oct 2023</h2>
                 <div class="gallery">
                     <div class="thumbnail-container">
-                        <img src="images/temple.jpg" loading="lazy">
+                        <img src="images/temple.jpg" loading="lazy" draggable="false">
                     </div>
                     <div class="thumbnail-container">
-                        <img src="images/window.jpg" loading="lazy">
+                        <img src="images/window.jpg" loading="lazy" draggable="false">
                     </div>
                     <div class="thumbnail-container">
-                        <img src="images/moon.jpg" loading="lazy">
+                        <img src="images/moon.jpg" loading="lazy" draggable="false">
                     </div>
                 </div>
             </section>
         </div>
+        
+        <footer class="copyright">
+            © 2024 Gavin Mak. All rights reserved.
+        </footer>
     </div>
 
     <div class="fullscreen-viewer" id="fullscreen-viewer">
@@ -65,7 +68,7 @@
         <button class="nav-button prev" id="prev-button" aria-label="Previous image">&lt;</button>
         <button class="nav-button next" id="next-button" aria-label="Next image">&gt;</button>
         <div class="loading-spinner"></div>
-        <img id="fullscreen-image" src="" alt="">
+        <img id="fullscreen-image" src="" alt="" draggable="false">
     </div>
 
     <script>
@@ -189,6 +192,27 @@
                     // Swipe right
                     showImage(currentImageIndex - 1);
                 }
+            }
+        });
+
+        // Add protection against right-click and keyboard shortcuts
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+
+        // Prevent keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
+                e.preventDefault();
+            }
+        });
+        
+        // Prevent drag and drop
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
             }
         });
     </script>
