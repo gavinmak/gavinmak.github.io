@@ -1,6 +1,7 @@
 .wrapper {
     margin: 2rem auto;
     padding: 0 4rem;
+    max-width: 1200px;
 }
 
 nav {
@@ -16,11 +17,28 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.gallery-section h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-family: 'Courier Prime', monospace;
+    color: #666;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .thumbnail-container {
@@ -28,17 +46,20 @@ nav a:hover {
     flex-grow: 0;
     flex-shrink: 0;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.95;
 }
 
 .thumbnail-container:hover {
     transform: scale(1.02);
+    opacity: 1;
 }
 
 .thumbnail-container img {
     height: 100%;
     width: auto;
     display: block;
+    object-fit: cover;
 }
 
 .fullscreen-viewer {
@@ -47,7 +68,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     display: none;
     justify-content: center;
     align-items: center;
@@ -146,11 +167,20 @@ nav a:hover {
     body {
         background-color: var(--light-secondary);
     }
+    
+    .gallery-section h2 {
+        border-bottom-color: #eee;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--dark-secondary);
+    }
+    
+    .gallery-section h2 {
+        color: #999;
+        border-bottom-color: #333;
     }
 }
 
@@ -167,6 +197,10 @@ nav a:hover {
     .gallery {
         gap: 1rem;
     }
+    
+    .gallery-container {
+        gap: 3rem;
+    }
 
     .nav-button {
         font-size: 1.5rem;
@@ -179,5 +213,10 @@ nav a:hover {
 
     .next {
         right: 10px;
+    }
+    
+    .gallery-section h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
     }
 }
