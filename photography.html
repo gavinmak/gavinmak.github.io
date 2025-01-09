@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gavin Mak's photography portfolio">
+    <title>Gavin Mak - Photography</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="photography.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href="https://gavinmak.com/photography">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="index.html">← back</a>
+            </nav>
+            <h1>photography</h1>
+        </header>
+        
+        <div class="gallery">
+            <div class="thumbnail-container">
+                <img src="images/fish.jpeg" alt="Photography by Gavin Mak" loading="lazy">
+            </div>
+            <div class="thumbnail-container">
+                <img src="images/IMG_0895.jpeg" alt="Photography by Gavin Mak" loading="lazy">
+            </div>
+            <div class="thumbnail-container">
+                <img src="images/IMG_0896.jpeg" alt="Photography by Gavin Mak" loading="lazy">
+            </div>
+            <div class="thumbnail-container">
+                <img src="images/maninhole.jpeg" alt="Photography by Gavin Mak" loading="lazy">
+            </div>
+            <div class="thumbnail-container">
+                <img src="images/no_watermark.jpeg" alt="Photography by Gavin Mak" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <div class="fullscreen-viewer" id="fullscreen-viewer">
+        <button class="close-button" id="close-button">×</button>
+        <img id="fullscreen-image" src="" alt="">
+    </div>
+
+    <script>
+        // Fullscreen viewer functionality
+        const viewer = document.getElementById('fullscreen-viewer');
+        const fullscreenImage = document.getElementById('fullscreen-image');
+        const closeButton = document.getElementById('close-button');
+        const thumbnails = document.querySelectorAll('.thumbnail-container img');
+
+        // Add click handlers to all thumbnails
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                fullscreenImage.src = thumbnail.src;
+                viewer.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeFullscreen() {
+            viewer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeButton.addEventListener('click', closeFullscreen);
+        viewer.addEventListener('click', (e) => {
+            if (e.target === viewer) closeFullscreen();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeFullscreen();
+        });
+    </script>
+</body>
+</html>
