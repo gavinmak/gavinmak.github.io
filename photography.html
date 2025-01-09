@@ -18,7 +18,7 @@
     <div class="wrapper">
         <header>
             <nav>
-                <a href="index.html">← back</a>
+                <a href="index.html">gavinmak.com</a>
             </nav>
             <h1>photography</h1>
         </header>
@@ -28,22 +28,25 @@
                 <h2>Alaska — Jan 2024</h2>
                 <div class="gallery">
                     <div class="thumbnail-container">
-                        <img src="images/aurora.jpg" alt="Sunset in Hong Kong" loading="lazy">
+                        <img src="images/aurora.jpg" loading="lazy">
                     </div>
                 </div>
             </section>
 
             <section class="gallery-section">
-                <h2>Asia — Nov 2023</h2>
+                <h2>Beijing, Hong Kong, Seoul — Nov 2023</h2>
                 <div class="gallery">
                     <div class="thumbnail-container">
-                        <img src="images/temple.jpg" alt="Street scene in Tokyo" loading="lazy">
+                        <img src="images/temple.jpg" loading="lazy">
                     </div>
                     <div class="thumbnail-container">
-                        <img src="images/window.jpg" alt="Traditional architecture in Kyoto" loading="lazy">
+                        <img src="images/window.jpg" loading="lazy">
                     </div>
                     <div class="thumbnail-container">
-                        <img src="images/hallway.jpg" alt="Night market in Seoul" loading="lazy">
+                        <img src="images/hallway.jpg" loading="lazy">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="images/moon.jpg" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -52,8 +55,8 @@
 
     <div class="fullscreen-viewer" id="fullscreen-viewer">
         <button class="close-button" id="close-button" aria-label="Close fullscreen view">×</button>
-        <button class="nav-button prev" id="prev-button" aria-label="Previous image">←</button>
-        <button class="nav-button next" id="next-button" aria-label="Next image">→</button>
+        <button class="nav-button prev" id="prev-button" aria-label="Previous image">&lt;</button>
+        <button class="nav-button next" id="next-button" aria-label="Next image">&gt;</button>
         <div class="loading-spinner"></div>
         <img id="fullscreen-image" src="" alt="">
     </div>
@@ -83,7 +86,6 @@
             showImage(currentImageIndex);
             viewer.classList.add('active');
             document.body.style.overflow = 'hidden';
-            closeButton.focus();
         }
 
         function closeFullscreen() {
