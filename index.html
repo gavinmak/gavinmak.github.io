@@ -12,12 +12,29 @@
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href="https://gavinmak.com/">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTBEJTC6KZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BTBEJTC6KZ');
+    </script>
     <script>
       const init = () => {
         const local = "gavinmak98";
         const domain = "gmail.com";
         const el = document.getElementById("mlink");
         el.href = `mailto:${local}@${domain}`;
+
+        const resumeLink = document.querySelector('a[href="GavinMakResume.pdf"]');
+        resumeLink.addEventListener('click', () => {
+          gtag('event', 'download_resume', {
+            'event_category': 'downloads',
+            'event_label': 'GavinMakResume.pdf'
+          });
+        });
       }
       window.onload = init;
     </script>
